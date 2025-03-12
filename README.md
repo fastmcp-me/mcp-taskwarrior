@@ -11,11 +11,21 @@ Provides 4 tools:
 - delete_task
 - list_tasks
 
-## Usage
+## usage - npx
 
 ```bash
+npx @0xbeedao/mcp-taskwarrior
+```
+
+## Usage - local
+
+Install locally by checking this out and then
+
+```bash
+cd mcp-taskwarrior
 pnpm install
 ```
+
 
 In Cursor, Goose, Claude or your favorite MCP client, choose "Command" style MCP, then `/path/to/this/repo/src/tasks.ts` as the argument.
 

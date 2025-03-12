@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 /**
  * This is a simple MCP server that facilitates management of tasks in Taskwarrior.
  * 
@@ -14,7 +15,7 @@
  */
 import { FastMCP } from "fastmcp";
 import { TaskwarriorLib } from "taskwarrior-lib";
-import type { Task } from "taskwarrior-lib/types";
+import type { Task } from "taskwarrior-lib/types/index.d.ts";
 import { z } from "zod";
 
 const server = new FastMCP({

@@ -1,23 +1,41 @@
 {
-  "name": "mcp-taskwarrior",
+  "name": "@0xbeedao/mcp-taskwarrior",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A simple MCP Server that facilitates management of tasks in Taskwarrior",
+  "main": "dist/tasks.js",
+  "bin": {
+    "mcp-taskwarrior": "./dist/tasks.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "MIT.txt"
+  ],
   "scripts": {
-    "dev": "node src/tasks.ts",
+    "build": "tsc",
+    "prepare": "npm run build",
+    "dev": "ts-node src/tasks.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": ["mcp", "taskwarrior", "tasks", "todo"],
+  "author": "Bruce Kroeze",
+  "license": "MIT",
   "packageManager": "pnpm@10.6.2",
   "dependencies": {
     "fastmcp": "^1.20.4",
     "taskwarrior-lib": "^0.5.2",
     "zod": "^3.24.2"
   },
+  "devDependencies": {
+    "typescript": "^5.4.2",
+    "ts-node": "^10.9.2",
+    "@types/node": "^20.11.24"
+  },
   "engines": {
     "node": ">=22.0.0"
   },
-  "type": "module"
+  "type": "module",
+  "publishConfig": {
+    "access": "public"
+  }
 }
